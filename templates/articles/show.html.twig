@@ -1,0 +1,5 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ sponsor.nom }}{% endblock %}
+{% block body %}
+    <h1>{{ sponsor.nom }}</h1> <p>{{ sponsor.num }}</p> <p>{{ sponsor.contribution }}</p> <p>{{ sponsor.evenement }}</p> <hr> <a href="/">Retour</a>
+{% endblock %}

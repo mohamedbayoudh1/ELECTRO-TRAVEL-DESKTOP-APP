@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des sponseurs{% endblock %}
+{% block body %}
+
+{{ form_start(form) }}
+<div class="form-row align-items-end" > <div class="col">
+        {{ form_row(form.nom) }}
+    </div>
+    <div class="col">
+        <div class="form-group">
+            <button type="submit" class="btn btn-success">Rechercher</button>
+        </div>
+    </div>
+</div>
+{{ form_end(form) }}
+
+    {% if sponsors %}
+<table id="sponsors" class="table table-striped">
+    <thead>
+    <tr>
+        <th>nom</th>
+        <th>num</th>
+        <th>contribution</th>
+        <th>evenement</th>
+        <th>event</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for sponsor in sponsors %}
+    <tr>
+        <td>{{ sponsor.nom }}</td>
+        <td>{{ sponsor.num }}</td>
+        <td>{{ sponsor.contribution }}</td>
+        <td>{{ sponsor.evenement }}</td>
+        <td>{{ sponsor.event.titre }}</td>
+        <td>
+            <a href="/sponsor/{{ sponsor.id }}" class="btn btn-dark">Détails</a>
+            <a href="/sponsor/edit/{{ sponsor.id }}" class="btn btn-dark">Modifier</a>
+            <a href="/sponsor/delete/{{ sponsor.id }}" class="btn btn-danger"
+               onclick="return confirm('Etes-vous sûr de supprimer ce sponseur?');">Supprimer</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p>Aucun sponseurs</p>
+{% endif %}
+{% endblock %}
