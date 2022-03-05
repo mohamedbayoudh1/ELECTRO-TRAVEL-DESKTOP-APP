@@ -9,7 +9,6 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @ORM\Table(name="User")
  * @UniqueEntity(
  *     fields={"email"},
  *     message="L'émail que vous avez tapé est déjà utilisé !"
@@ -25,11 +24,7 @@ class User implements UserInterface
     private $id;
 
     /**
-     * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
-     * @UniqueEntity(
-     * fields={"email"},
-     * message="L'émail que vous avez tapé est déjà utilisé !"
-     * )
+     * @ORM\Column(type="string", length=255)
      */
 
     private $email;
@@ -51,6 +46,7 @@ class User implements UserInterface
      *  @Assert\Length(
      *      min = 8,
      *      minMessage = "Votre mot de passe doit comporter au minimum {{ limit }} caractères")
+     *  @Assert\EqualTo(propertyPath = "confirm_password", message="Vous n'avez pas passé le même mot de passe !" )
      */
     private $password;
 
@@ -59,6 +55,9 @@ class User implements UserInterface
      *  @Assert\EqualTo(propertyPath = "password", message="Vous n'avez pas passé le même mot de passe !" )
      */
     private $confirm_password;
+
+
+
 
     public function getConfirmPassword()
     {
