@@ -2,14 +2,13 @@
 namespace App\Entity;
 class PropertySearch
 {
-    private $username;
-    public function getUsername(): ?string
+    private $nom;
+    public function getNom(): ?string
     {
-        return $this->username;
+        return $this->nom;
     }
-    public function setUsername(string $username): self
+    public function setNom(string $nom): self
     {
-        $this->username = $username;
+        $this->nom = $nom;
         return $this;
-    }
-}
+    } }
