@@ -34,9 +34,25 @@ class Event
      */
     private $sponseur;
 
+    /**
+     * @ORM\ManyToMany(targetEntity=User::class, inversedBy="events")
+     */
+    private $users;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $date;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $capacite;
+
     public function __construct()
     {
         $this->sponseur = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -94,6 +110,54 @@ class Event
                 $sponseur->setEvent(null);
             }
         }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, User>
+     */
+    public function getUsers(): Collection
+    {
+        return $this->users;
+    }
+
+    public function addUser(User $user): self
+    {
+        if (!$this->users->contains($user)) {
+            $this->users[] = $user;
+        }
+
+        return $this;
+    }
+
+    public function removeUser(User $user): self
+    {
+        $this->users->removeElement($user);
+
+        return $this;
+    }
+
+    public function getDate(): ?string
+    {
+        return $this->date;
+    }
+
+    public function setDate(string $date): self
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    public function getCapacite(): ?int
+    {
+        return $this->capacite;
+    }
+
+    public function setCapacite(int $capacite): self
+    {
+        $this->capacite = $capacite;
 
         return $this;
     }
