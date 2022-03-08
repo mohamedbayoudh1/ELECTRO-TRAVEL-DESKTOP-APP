@@ -13,7 +13,7 @@
     </div>
 </div>
 {{ form_end(form) }}
-
+ {{ session.role }}
     {% if sponsors %}
 <table id="sponsors" class="table table-striped">
     <thead>
@@ -36,14 +36,17 @@
         <td>{{ sponsor.event.titre }}</td>
         <td>
             <a href="/sponsor/{{ sponsor.id }}" class="btn btn-dark">Détails</a>
+            {% if session.role != 'client' %}
             <a href="/sponsor/edit/{{ sponsor.id }}" class="btn btn-dark">Modifier</a>
             <a href="/sponsor/delete/{{ sponsor.id }}" class="btn btn-danger"
                onclick="return confirm('Etes-vous sûr de supprimer ce sponseur?');">Supprimer</a>
+            {% endif %}
         </td>
     </tr>
     {% endfor %}
     </tbody>
 </table>
+
 {% else %}
     <p>Aucun sponseurs</p>
 {% endif %}

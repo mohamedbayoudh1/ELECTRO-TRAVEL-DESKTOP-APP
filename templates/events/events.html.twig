@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des evenements{% endblock %}
+{% block body %}
+{% if events %}
+<table id="events" class="table table-striped">
+    <thead>
+    <tr>
+        <th>titre</th>
+        <th>description</th>
+        <th>date</th>
+        <th>capacite</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for event in events %}
+    <tr>
+        <td>{{ event.titre }}</td>
+        <td>{{ event.description }}</td>
+        <td>{{ event.date }}</td>
+        <td>{{ event.capacite }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p>Aucun evenement</p>
+{% endif %}
+{% endblock %}

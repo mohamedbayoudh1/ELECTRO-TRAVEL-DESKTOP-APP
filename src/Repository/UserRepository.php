@@ -19,6 +19,7 @@ class UserRepository extends ServiceEntityRepository
         parent::__construct($registry, User::class);
     }
 
+
     // /**
     //  * @return User[] Returns an array of User objects
     //  */

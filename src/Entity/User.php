@@ -39,6 +39,11 @@ class User
      */
     private $events;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $role;
+
     public function __construct()
     {
         $this->events = new ArrayCollection();
@@ -110,5 +115,25 @@ class User
         }
 
         return $this;
+    }
+
+
+
+
+    public function getRole(): ?string
+    {
+        return $this->role;
+    }
+
+    public function setRole(string $role): self
+    {
+        $this->role = $role;
+
+        return $this;
+    }
+    //ceci est pour les tests en attendant la session
+     public function retournerClient(): self
+    {
+    return new User();
     }
 }

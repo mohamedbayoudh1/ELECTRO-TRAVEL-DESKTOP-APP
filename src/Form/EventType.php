@@ -14,6 +14,9 @@ class EventType extends AbstractType
         $builder
             ->add('titre')
             ->add('description')
+            ->add('date')
+            ->add('capacite')
+
         ;
     }
 
