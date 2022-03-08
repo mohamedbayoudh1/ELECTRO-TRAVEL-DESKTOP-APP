@@ -173,8 +173,8 @@ class IndexController extends AbstractController
 // Render the HTML as PDF
         $dompdf->render();
 // Output the generated PDF to Browser (force download)
-        $dompdf->stream("mypdf.pdf", [
-            "Attachment" => true
+        $dompdf->stream("mylist.pdf", [
+            "Attachment" => false
         ]);
     }
 

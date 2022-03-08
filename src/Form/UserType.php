@@ -20,6 +20,7 @@ class UserType extends AbstractType
             ->add('username')
             ->add('password',PasswordType::class)
             ->add('confirm_password',PasswordType::class)
+
         ;
     }
 

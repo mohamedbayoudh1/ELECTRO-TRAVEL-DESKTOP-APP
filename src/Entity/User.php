@@ -7,15 +7,15 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
-/**
- * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @UniqueEntity(
- *     fields={"email"},
- *     message="L'émail que vous avez tapé est déjà utilisé !"
- * )
- */
-class User implements UserInterface
-{
+   /**
+   * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+   * @UniqueEntity(
+   *     fields={"email"},
+   *     message="L'émail que vous avez tapé est déjà utilisé !"
+   * )
+   */
+   class User implements UserInterface
+   {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -55,6 +55,10 @@ class User implements UserInterface
      *  @Assert\EqualTo(propertyPath = "password", message="Vous n'avez pas passé le même mot de passe !" )
      */
     private $confirm_password;
+
+
+
+
 
 
 
@@ -115,13 +119,10 @@ class User implements UserInterface
     }
 
     public function getRoles()
-    {
-        return ['ROLE_USER'];
-    }
+     {
+    return ['ROLE_USER'];
+     }
+     public function eraseCredentials() {}
+     public function getSalt() {}
 
-    public function eraseCredentials() {}
-
-    public function getSalt() {}
-
-
-}
+   }
