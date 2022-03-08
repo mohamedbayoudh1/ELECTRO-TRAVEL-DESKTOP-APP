@@ -6,7 +6,7 @@
         <div class="collapse navbar-collapse" id="mobile-nav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a href="/" class="nav-link">Home</a>
+                    <a href="/" class="nav-link">Sponsors</a>
                 </li>
                 <li class="nav-item"> <a href="{{ path('new_sponsor')}}" class="nav-link">Ajouter sponseur</a>
                 </li>
@@ -14,7 +14,10 @@
                     <a href="{{ path('new_event')}}" class="nav-link">Ajouter evenement</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/events/list" class="nav-link">events</a>
+                    <a href="/events/list" class="nav-link">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ path('sponsor_par_event')}}" class="nav-link">Recherche par evenement</a>
                 </li>
             </ul>
         </div>

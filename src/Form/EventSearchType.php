@@ -2,32 +2,27 @@
 
 namespace App\Form;
 
-use App\Entity\Sponsor;
+use App\Entity\Event;
+use App\Entity\EventSearch;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use App\Entity\Event;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
-class SponsorType extends AbstractType
+class EventSearchType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('nom')
-            ->add('num')
-            ->add('contribution')
-            //->add('evenement')
-            ->add('event',EntityType::class,['class' => Event::class,
+            ->add('event', EntityType::class, ['class' => Event::class,
                 'choice_label' => 'titre',
-                'label' => 'evenement']);
-
+                'label' => 'Event']);
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Sponsor::class,
+            'data_class' => EventSearch::class,
         ]);
     }
 }

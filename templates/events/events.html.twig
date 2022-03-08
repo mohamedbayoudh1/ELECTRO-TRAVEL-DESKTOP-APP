@@ -19,6 +19,11 @@
         <td>{{ event.description }}</td>
         <td>{{ event.date }}</td>
         <td>{{ event.capacite }}</td>
+        <td>
+                <a href="/event/edit/{{ event.id }}" class="btn btn-dark">Modifier</a>
+                <a href="/event/delete/{{ event.id }}" class="btn btn-danger"
+                   onclick="return confirm('Etes-vous sûr de supprimer cet evenement?');">Supprimer</a>
+        </td>
     </tr>
     {% endfor %}
     </tbody>

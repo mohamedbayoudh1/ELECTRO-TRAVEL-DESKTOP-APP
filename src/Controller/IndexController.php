@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\EventSearch;
 use App\Entity\PropertySearch;
 use App\Entity\User;
+use App\Form\EventSearchType;
 use App\Form\PropertySearchType;
 use App\Form\SponsorType;
 use App\Entity\Sponsor;
@@ -29,7 +31,7 @@ class IndexController extends AbstractController
     { //creer session a la main temporaire pour test
         $session=$this->getDoctrine()->getRepository(User::class)->find(1);
         $sessionClient=$this->getDoctrine()->getRepository(User::class)->find(2);
-        echo ($session->getRole());
+        //echo ($session->getRole());
         $propertySearch = new PropertySearch();
         $form = $this->createForm(PropertySearchType::class, $propertySearch);
         $form->handleRequest($request);
@@ -190,4 +192,25 @@ class IndexController extends AbstractController
         return $this->redirectToRoute('event_list');
     }
 
+    /**
+     * @Route("/sponsor_event/", name="sponsor_par_event")
+     * Method({"GET", "POST"})
+     */
+    public function sponsorParEvent(Request $request)
+    {
+        $eventSearch = new EventSearch();
+        $form = $this->createForm(EventSearchType::class,$eventSearch);
+        $form->handleRequest($request);
+        $sponsors= [];
+        if($form->isSubmitted() && $form->isValid()) {
+            $event = $eventSearch->getEvent();
+
+            if ($event!="")
+                $sponsors= $event->getSponseur();
+            else
+                $articles= $this->getDoctrine()->getRepository(Sponsor::class)->findAll();
+        }
+
+        return $this->render('articles/sponsorsParEvent.html.twig',['form' => $form->createView(),'sponsors' => $sponsors]);
+ }
 }

@@ -13,7 +13,7 @@
     </div>
 </div>
 {{ form_end(form) }}
- {{ session.role }}
+
     {% if sponsors %}
 <table id="sponsors" class="table table-striped">
     <thead>
@@ -21,7 +21,7 @@
         <th>nom</th>
         <th>num</th>
         <th>contribution</th>
-        <th>evenement</th>
+
         <th>event</th>
         <th>Actions</th>
     </tr>
@@ -32,7 +32,6 @@
         <td>{{ sponsor.nom }}</td>
         <td>{{ sponsor.num }}</td>
         <td>{{ sponsor.contribution }}</td>
-        <td>{{ sponsor.evenement }}</td>
         <td>{{ sponsor.event.titre }}</td>
         <td>
             <a href="/sponsor/{{ sponsor.id }}" class="btn btn-dark">Détails</a>
