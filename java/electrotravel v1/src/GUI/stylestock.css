@@ -1,0 +1,132 @@
+
+
+.Overview:hover{
+
+    -fx-border-color: #660099;
+    -fx-border-width :0px 0px 3px 0px ;
+}
+#tab1:hover{
+
+    -fx-border-color: #660099;
+    -fx-border-width :0px 0px 3px 0px ;
+}
+#tab2:hover{
+
+    -fx-border-color: #660099;
+    -fx-border-width :0px 0px 3px 0px ;
+}
+#tab3:hover{
+
+    -fx-border-color: #660099;
+    -fx-border-width :0px 0px 3px 0px ;
+}
+.Fournisseurs:hover{
+
+    -fx-border-color: #660099;
+    -fx-border-width :0px 0px 3px 0px ;
+}
+
+
+.text-field {
+    -fx-background-color: -fx-text-box-border, -fx-background ;
+    -fx-background-insets: 0, 0 0 1 0 ;
+    -fx-background-radius: 0 ;
+    -fx-text-fill:#00FE99;
+}
+.text-field:focused {
+
+    -fx-background-color:transparent; -fx-text-fill:#00FE99; -fx-font-size:16
+}
+.table-view {
+    -fx-background-color:#a396f8;
+    -fx-background-radius:14 14 0 0;
+
+    }
+.table-view .column-header-background{
+        -fx-background-color: #a396f8;
+        -fx-background-radius:14;
+        -fx-background-insets: 0 0 10 0;
+
+
+
+    }
+.table-view .column-header, .table-view .filler{
+        -fx-size:50px;
+        -fx-border-width: 0 0 10 0;
+        -fx-background-color:transparent;
+
+    }
+
+.table-view .column-header .label {
+        -fx-text-fill: white ;
+    }
+.tab-header-area .tab-header-background {
+ 	-fx-background-color: -fx-primary-color;
+}
+.tab-pane .tab:selected {
+	-fx-background-color: -fx-secondary-color;
+	-fx-background-insets: 0 0 0 0;
+	-fx-background-radius: 0 0 0 0;
+}
+.tab .tab-label {
+ 	-fx-alignment: CENTER;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+	-fx-padding: 0 10 0 10;
+}
+.tab-pane:top *.tab-header-area {
+	-fx-padding: 0 0 0 30;
+
+	/* NO SPACE LEFT OF FIRST TAB */
+	/* -fx-padding: 0 0 0 30; */
+}
+.tab-pane {
+	-fx-background-color: transparent;
+	-fx-tab-min-width: 100px;
+	-fx-tab-min-height: 66px;
+	-fx-tab-max-height: 66px;
+}
+.tab-pane .tab {
+	-fx-background-color: transparent;
+}
+.tab-pane:focused .tab-header-area .headers-region .tab:selected .focus-indicator {
+ 	-fx-border-width: 0;
+	-fx-border-insets: 0 0 0 0;
+	-fx-border-radius: 0;
+}
+.default-color0.chart-bar {
+    -fx-bar-fill: #2febda;
+}
+.chart-content {
+    -fx-padding: 30px;
+    -fx-font-size: 18px;
+
+}
+.chart-legend-item{
+    -fx-text-fill: #191970;
+    -fx-padding: 10px;
+}
+.xaxis{
+      -fx-border-color:  #00FF93 transparent transparent;
+      -fx-border-width:3;
+      -fx-font-size:30px;
+
+}
+.yaxis{
+      -fx-border-color: transparent #00FF93 transparent transparent;
+      -fx-border-width:3;
+}
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #3278fa;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}

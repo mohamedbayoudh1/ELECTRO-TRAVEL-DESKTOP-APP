@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
+   <children>
+      <ImageView fitHeight="516.0" fitWidth="863.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img/istockphoto-1045469854-170667a.jpg" />
+         </image>
+      </ImageView>
+      <HBox alignment="TOP_CENTER" layoutX="-2.0" prefHeight="135.0" prefWidth="863.0" style="-fx-border-width: 10;" styleClass="b">
+         <children>
+            <Button mnemonicParsing="false" onAction="#login" prefHeight="45.0" prefWidth="220.0" text="Login" textFill="#029df7">
+               <font>
+                  <Font name="Century Gothic" size="42.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#signup" prefHeight="45.0" prefWidth="220.0" text="SignUp" textFill="#3783ec">
+               <font>
+                  <Font name="Century Gothic" size="42.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane fx:id="arlogin" layoutX="1.0" layoutY="103.0" prefHeight="409.0" prefWidth="852.0">
+         <children>
+            <ImageView fitHeight="205.0" fitWidth="145.0" layoutX="533.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/login-icon-png-21.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="username" layoutX="306.0" layoutY="132.0" prefHeight="31.0" prefWidth="185.0" promptText="Insert Your email" />
+            <Button layoutX="533.0" layoutY="144.0" mnemonicParsing="false" onAction="#loginn" prefHeight="70.0" prefWidth="145.0" style="-fx-border-color: #3e1046; -fx-border-width: 6;" text="Login" textAlignment="CENTER" textFill="#073cd9">
+               <font>
+                  <Font name="Century Gothic" size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="oublier" layoutX="522.0" layoutY="234.0" mnemonicParsing="false" onAction="#oublier" prefHeight="31.0" prefWidth="169.0" text="Mot de passe oublié ?" visible="false" />
+            <Label layoutX="204.0" layoutY="132.0" prefHeight="18.0" prefWidth="118.0" text="E-mail :" textFill="#ebf238">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font></Label>
+            <Label graphicTextGap="20.0" layoutX="204.0" layoutY="191.0" prefHeight="18.0" prefWidth="118.0" text="Password :" textAlignment="CENTER" textFill="#e7f24e">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <PasswordField fx:id="password" layoutX="306.0" layoutY="189.0" prefHeight="31.0" prefWidth="186.0" promptText="Insert Your Password" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="arsignup" layoutX="3.0" layoutY="140.0" prefHeight="360.0" prefWidth="852.0" visible="false">
+         <children>
+            <TextField fx:id="prenom" layoutX="334.0" layoutY="94.0" prefHeight="26.0" prefWidth="186.0" promptText="Inserer votre Prenom" />
+            <TextField fx:id="numtel_user" layoutX="334.0" layoutY="130.0" prefHeight="26.0" prefWidth="186.0" promptText="Inserer votre numéro telephone" />
+            <TextField fx:id="nom" layoutX="334.0" layoutY="57.0" prefHeight="26.0" prefWidth="186.0" promptText="Inserer votre nom" />
+            <TextField fx:id="email" layoutX="334.0" layoutY="-13.0" prefHeight="26.0" prefWidth="186.0" promptText="inserer votre email" />
+            <Button layoutX="329.0" layoutY="215.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="56.0" prefWidth="158.0" text="Sign Up !" />
+            <PasswordField fx:id="mdp" layoutX="334.0" layoutY="22.0" prefHeight="26.0" prefWidth="186.0" promptText="inserer votre mot de passe" />
+            <TextField fx:id="adresse_user" layoutX="334.0" layoutY="167.0" prefHeight="26.0" prefWidth="186.0" promptText="inserer votre adresse" />
+            <Label layoutX="244.0" layoutY="-8.0" prefHeight="18.0" prefWidth="64.0" text="E-mail :" textFill="#ece334">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="244.0" layoutY="25.0" prefHeight="20.0" prefWidth="74.0" style="-fx-font-weight: bold;" text="Password :" textFill="#ece334">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="244.0" layoutY="60.0" prefHeight="18.0" prefWidth="64.0" style="-fx-font-weight: bold;" text="Nom :" textFill="#ece334">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="244.0" layoutY="97.0" prefHeight="18.0" prefWidth="64.0" style="-fx-font-weight: bold;" text="Prenom :" textFill="#ece334">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="244.0" layoutY="133.0" prefHeight="20.0" prefWidth="82.0" style="-fx-font-weight: bold;" text="Telephone :" textFill="#ece334">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+            <Label layoutX="242.0" layoutY="168.0" prefHeight="18.0" prefWidth="64.0" style="-fx-font-weight: bold;" text="Adresse :" textFill="#ece334">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mdpoublier" layoutX="3.0" layoutY="140.0" prefHeight="375.0" prefWidth="860.0" visible="false">
+         <children>
+            <TextField fx:id="email1" layoutX="297.0" layoutY="120.0" prefHeight="31.0" prefWidth="220.0" promptText="Entrez votre email" />
+            <Button fx:id="envoyermdp" layoutX="303.0" layoutY="199.0" mnemonicParsing="false" onAction="#envoyermdp" prefHeight="31.0" prefWidth="208.0" text="Envoyer" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
