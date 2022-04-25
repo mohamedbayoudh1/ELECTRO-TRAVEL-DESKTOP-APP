@@ -321,7 +321,7 @@ cnx=Projectbd.getInstance().getCnx();
 		}
 		
 		
-		  FileOutputStream fos=new FileOutputStream("C:\\Users\\Asus\\Documents\\NetBeansProjects\\Gamingland\\src\\GUI\\user.xlsx");
+		  FileOutputStream fos=new FileOutputStream("C:\\\\Users\\\\bayou\\\\Desktop\\\\finaluser\\\\build\\\\classes\\\\GUI\\\\user.xlsx");
 		workbook.write(fos);
 		
 		workbook.close();

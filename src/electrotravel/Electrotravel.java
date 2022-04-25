@@ -9,7 +9,12 @@ import entity.Role;
 import entity.User ;
 import javax.xml.transform.Source;
 import service.Serviceuser;
-                                                                                                                                                                                                                                                                                        //7
+import utils.SmsApi;
+
+/**
+ *
+ * @author Asus
+ */                                                                                                                                                                                                                                                                                    //7
 public class Electrotravel {
 
     /**
@@ -17,8 +22,11 @@ public class Electrotravel {
      */
     public static void main(String[] args) {
         Serviceuser su = new Serviceuser() ;
-    
-                                                                                                                                                                                                                                                                                         //8
+            
+         SmsApi s = new SmsApi();
+           s.sendSMS("Electro travel say Hello ! ","53001618");         
+             
+                                                                                                                                                                                                                                                                               //8
   
     }
     

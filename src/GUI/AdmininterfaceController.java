@@ -178,6 +178,7 @@ public class AdmininterfaceController implements Initializable {
 
     
     
+    
     @FXML
     private void afficherRech(KeyEvent event) {
          
@@ -197,70 +198,42 @@ public class AdmininterfaceController implements Initializable {
        
     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-//4
-    @FXML
+@FXML
     private void PDF(ActionEvent event) throws DocumentException, BadElementException, IOException, FileNotFoundException, InterruptedException, SQLException {
-       
+        Pdf pd=new Pdf();
+        try{
+        pd.GeneratePdf("list of users");
+            System.out.println("impression done");
+        } catch (Exception ex) {
+            Logger.getLogger(Serviceuser.class.getName()).log(Level.SEVERE, null, ex);
+            }
     } 
 
     @FXML
     private void exel(ActionEvent event) throws IOException {
        
+        File file = new File("");
+        
+       
+        if(!Desktop.isDesktopSupported()){
+            System.out.println("Desktop is not supported");
+            return;
+        }
+        
+        Desktop desktop = Desktop.getDesktop();
+        if(file.exists()) desktop.open(file);
+        
+        
+        file = new File("C:\\Users\\bayou\\Desktop\\finaluser\\build\\classes\\GUI\\user.xlsx");
+       
+        
+        if(file.exists()) desktop.open(file);
+              Serviceuser su = new Serviceuser() ;
+           
+
+        su.excel();
     }
+  
     
     
     

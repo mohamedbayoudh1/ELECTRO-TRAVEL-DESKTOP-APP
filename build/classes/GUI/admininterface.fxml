@@ -32,8 +32,8 @@
             <Image url="@../../../../../Desktop/273112629_101101675832705_8099753981398715536_n.jpg" />
          </image>
       </ImageView>
-      <Button fx:id="PDF" layoutX="882.0" layoutY="112.0" mnemonicParsing="false" onAction="#PDF" prefHeight="31.0" prefWidth="122.0" text="PDF" visible="false" />
-      <Button fx:id="exel" layoutX="882.0" layoutY="168.0" mnemonicParsing="false" onAction="#exel" prefHeight="31.0" prefWidth="122.0" text="excel" visible="false" />
+      <Button fx:id="PDF" layoutX="905.0" layoutY="112.0" mnemonicParsing="false" onAction="#PDF" prefHeight="31.0" prefWidth="122.0" text="PDF" />
+      <Button fx:id="exel" layoutX="1044.0" layoutY="112.0" mnemonicParsing="false" onAction="#exel" prefHeight="31.0" prefWidth="122.0" text="Excel" />
       <TitledPane animated="false" layoutX="14.0" layoutY="115.0" prefHeight="263.0" prefWidth="402.0" text="Modifier / Supprimer  un utilisateur :">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="234.0" prefWidth="405.0">

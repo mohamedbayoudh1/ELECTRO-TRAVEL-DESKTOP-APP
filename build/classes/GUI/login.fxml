@@ -51,7 +51,7 @@
                   <Font name="Century Gothic" size="32.0" />
                </font>
             </Button>
-            <Button fx:id="oublier" layoutX="522.0" layoutY="234.0" mnemonicParsing="false" onAction="#oublier" prefHeight="31.0" prefWidth="169.0" text="Mot de passe oublié ?" visible="false" />
+            <Button fx:id="oublier" layoutX="534.0" layoutY="234.0" mnemonicParsing="false" onAction="#oublier" prefHeight="31.0" prefWidth="146.0" text="Mot de passe oublié ?" />
             <Label layoutX="204.0" layoutY="132.0" prefHeight="18.0" prefWidth="118.0" text="E-mail :" textFill="#ebf238">
                <font>
                   <Font name="System Bold" size="20.0" />
@@ -103,6 +103,11 @@
          <children>
             <TextField fx:id="email1" layoutX="297.0" layoutY="120.0" prefHeight="31.0" prefWidth="220.0" promptText="Entrez votre email" />
             <Button fx:id="envoyermdp" layoutX="303.0" layoutY="199.0" mnemonicParsing="false" onAction="#envoyermdp" prefHeight="31.0" prefWidth="208.0" text="Envoyer" />
+            <Label layoutX="236.0" layoutY="92.0" prefHeight="19.0" prefWidth="342.0" text="Saisir votre email pour recuperer votre mot de passe :" textFill="#f4f438">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>

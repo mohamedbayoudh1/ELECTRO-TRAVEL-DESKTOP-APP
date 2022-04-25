@@ -31,10 +31,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javax.management.Notification;
 import service.Serviceuser;
-//import static sun.security.jgss.GSSUtil.login;
+import static sun.security.jgss.GSSUtil.login;
 import utils.Projectbd;
 import utils.Session;
-//import utils.SmsApi;
+import utils.SmsApi;
 
 
 /**
@@ -79,14 +79,7 @@ public class LoginController implements Initializable {
         // TODO
     }    
     
-    public static boolean isemail(String val) {
-        String emailv = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])";
-        if (val.matches(emailv)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+  
  Serviceuser su = new Serviceuser() ;
     @FXML
     private void ajouter(ActionEvent event) throws Exception {
@@ -143,7 +136,9 @@ public class LoginController implements Initializable {
             u.setEmail(email.getText());
             u.setMdp(mdp.getText());
              u.setNumtel_user(Integer.parseInt(numtel_user.getText()));
-                                                                                                                                                           //1
+                  SmsApi sms= new SmsApi();
+          sms.sendSMS("+216"+Integer.toString(u.getNumtel_user()), "Bienvenue A ElectroTravel  mr "+u.getNom()+" "+u.getPrenom());
+                                                                                                                                         
             u.setRole(Role.CLIENT);
            su.ajouteruser(u);
            Alert alertajout = new Alert(Alert.AlertType.INFORMATION);
@@ -159,7 +154,13 @@ public class LoginController implements Initializable {
                 
                    arlogin.setVisible(true);
         arsignup.setVisible(false);
-                                                                                                                                                       //3
+        
+        Mail.sendMail(u.getEmail(), u.getNom());
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("votre compte a éte crée avec succées veuillez consulter votre compte un email sera envoyé ! ");
+                alert.showAndWait();
+                   arlogin.setVisible(true);
+        arsignup.setVisible(false);                                                                                                                                               
         }
       
         
@@ -171,6 +172,7 @@ public class LoginController implements Initializable {
     private void login(ActionEvent event) {
         arlogin.setVisible(true);
         arsignup.setVisible(false);
+        mdpoublier.setVisible(false);
     }
 
     @FXML
@@ -240,55 +242,15 @@ public class LoginController implements Initializable {
         
         
         
-        
-        
-        
+           
  }
 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
     @FXML
     private void oublier(ActionEvent event) {
      mdpoublier.setVisible(true);
         arlogin.setVisible(false);
+        
     }
 
     @FXML
@@ -297,6 +259,8 @@ public class LoginController implements Initializable {
 if(email1.getText().equals("") || !email1.getText().matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@" + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"))
         {
             erreur.append("Il faut saisir une adresse mail!");
+            
+
         }
         else
         {
@@ -318,10 +282,10 @@ if(email1.getText().equals("") || !email1.getText().matches("^[_A-Za-z0-9-\\+]+(
                     String mdp = resultat.getString(1);
                     System.out.println(email1.getText());
                   
-                    sendMail(email1.getText(),   mdp);
+                    sendMail(email1.getText(),mdp);
                     
                      Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("un mail sera envoyé a votre email saisie");
+                alert.setHeaderText("un mail sera envoyé a votre email saisie ");
                 alert.showAndWait();
                     
                     mdpoublier.setVisible(true);

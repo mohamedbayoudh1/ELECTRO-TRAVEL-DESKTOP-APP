@@ -7,11 +7,10 @@
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/service/Iservice.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/utils/Projectbd.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/entity/Mail.java</file>
-            <file>file:/C:/Users/bayou/Desktop/finaluser/src/img/external-login-ipad-apps-flat-icons-inmotus-design.png</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/service/Serviceuser.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/GUI/stylestock.css</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/entity/Role.java</file>
-            <file>file:/C:/Users/bayou/Desktop/finaluser/src/img/client-login-icon-4.gif</file>
+            <file>file:/C:/Users/bayou/Desktop/finaluser/src/GUI/login.fxml</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/entity/User.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/electrotravel/Main.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/utils/Session.java</file>
@@ -19,8 +18,8 @@
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/entity/Pdf.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/GUI/LoginController.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/electrotravel/Electrotravel.java</file>
+            <file>file:/C:/Users/bayou/Desktop/finaluser/src/utils/SmsApi.java</file>
             <file>file:/C:/Users/bayou/Desktop/finaluser/src/GUI/AdmininterfaceController.java</file>
-            <file>file:/C:/Users/bayou/Desktop/finaluser/src/GUI/admininterface.fxml</file>
         </group>
     </open-files>
 </project-private>
