@@ -72,6 +72,8 @@ public class LoginController implements Initializable {
     private Button envoyermdp;
     @FXML
     private AnchorPane mdpoublier;
+    @FXML
+    private Button front;
 
    
     @Override
@@ -299,6 +301,20 @@ if(email1.getText().equals("") || !email1.getText().matches("^[_A-Za-z0-9-\\+]+(
             
         
         
+    }
+
+    @FXML
+    private void front(ActionEvent event) {
+        
+         try {
+            Parent root =  FXMLLoader.load(getClass().getResource("/GUI/acceuil.fxml"));
+           Scene scene=new Scene(root);
+           Stage stage =new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
        
     

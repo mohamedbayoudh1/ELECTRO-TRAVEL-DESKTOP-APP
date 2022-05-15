@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ItemBController">
+   <children>
+      <ImageView fx:id="imga" fitHeight="172.0" fitWidth="200.0" layoutX="42.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true" styleClass="fruit-item">
+         <image>
+            <Image url="@../../../../ch/pidev/src/img/agence.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="typeb" layoutX="87.0" layoutY="18.0" text="MARQUE" textAlignment="CENTER" textFill="#140b90">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label fx:id="prixb" layoutX="122.0" layoutY="197.0" text="PRIX" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="24.0" layoutY="31.0" prefHeight="17.0" prefWidth="60.0" text="TYPE" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="201.0" prefHeight="17.0" prefWidth="65.0" text="PRIX :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="230.0" prefHeight="17.0" prefWidth="110.0" text="Nombre de places:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="nb" layoutX="161.0" layoutY="226.0" text="Nb" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

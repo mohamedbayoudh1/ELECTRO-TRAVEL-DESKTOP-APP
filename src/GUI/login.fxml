@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="516.0" prefWidth="846.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.LoginController">
    <children>
       <ImageView fitHeight="516.0" fitWidth="863.0" pickOnBounds="true">
          <image>
@@ -61,6 +61,11 @@
                   <Font name="System Bold" size="19.0" />
                </font></Label>
             <PasswordField fx:id="password" layoutX="306.0" layoutY="189.0" prefHeight="31.0" prefWidth="186.0" promptText="Insert Your Password" />
+            <Button fx:id="front" layoutX="552.0" layoutY="336.0" mnemonicParsing="false" onAction="#front" prefHeight="42.0" prefWidth="286.0" style="-fx-border-color: #3e1046; -fx-border-width: 6;" text="Login AS a visitor" textAlignment="CENTER" textFill="#073cd9">
+               <font>
+                  <Font name="Century Gothic" size="24.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="arsignup" layoutX="3.0" layoutY="140.0" prefHeight="360.0" prefWidth="852.0" visible="false">

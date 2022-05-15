@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="695.0" prefWidth="1125.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GestionAgenceBusController">
+   <children>
+      <ImageView fitHeight="782.0" fitWidth="1224.0" layoutX="-7.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/accueil.jpg" />
+         </image>
+      </ImageView>
+      <TabPane layoutX="293.0" layoutY="184.0" prefHeight="521.0" prefWidth="566.0" style="-fx-background-color: #D5EDF5;" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab fx:id="Agence" style="-fx-background-color: #D5EDF5;" text="Agence">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="503.0" prefWidth="585.0">
+                     <children>
+                        <Label layoutX="51.0" layoutY="39.0" text="Nom" />
+                        <Label layoutX="51.0" layoutY="79.0" prefHeight="17.0" prefWidth="95.0" text="Adresse" />
+                        <TextField fx:id="tnom" layoutX="146.0" layoutY="32.0" promptText="Nom" />
+                        <TextField fx:id="tadresse" layoutX="146.0" layoutY="74.0" promptText="Adresse" />
+                        <Label layoutX="52.0" layoutY="117.0" text="Numero tel" />
+                        <TextField fx:id="tnumtel" layoutX="146.0" layoutY="112.0" promptText="Num tel" />
+                        <TextField fx:id="tnumbus" layoutX="146.0" layoutY="154.0" promptText="Nombre de Bus" />
+                        <Label layoutX="50.0" layoutY="159.0" text="Nombre Bus" />
+                        <Button alignment="BASELINE_LEFT" layoutX="51.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnajouterA" prefHeight="62.0" prefWidth="204.0" style="-fx-background-color: #408DAA;" text="Ajouter" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Black" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="293.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnafficherA" prefHeight="62.0" prefWidth="200.0" style="-fx-background-color: #408DAA;" text="Afficher" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Black" size="18.0" />
+                           </font>
+                        </Button>
+                        
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab style="-fx-background-color: #D5EDF5;" text="Bus">
+               <content>
+                  <AnchorPane cacheShape="false" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="47.0" layoutY="67.0" prefHeight="17.0" prefWidth="52.0" text="Type" />
+                        <Label layoutX="39.0" layoutY="109.0" prefHeight="21.0" prefWidth="85.0" text="Nbrdeplace" />
+                        <Label layoutX="56.0" layoutY="155.0" prefHeight="17.0" prefWidth="52.0" text="Prix" />
+                        <TextField fx:id="ttype" layoutX="133.0" layoutY="62.0" promptText="Type" />
+                        <TextField fx:id="tnbrdeplace" layoutX="133.0" layoutY="104.0" promptText="Nombre de place" />
+                        <TextField fx:id="tprix" layoutX="133.0" layoutY="150.0" promptText="Prix" />
+                        <Label layoutX="40.0" layoutY="201.0" prefHeight="17.0" prefWidth="85.0" text="image" />
+                        <Button layoutX="163.0" layoutY="196.0" mnemonicParsing="false" onAction="#btnupimage" style="-fx-background-color: #408DAA;" text="Ajouter une image" textFill="WHITE" />
+                        <ImageView fx:id="imagefield" fitHeight="150.0" fitWidth="200.0" layoutX="331.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+                        <Button alignment="BASELINE_LEFT" layoutX="51.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnajouterB" prefHeight="62.0" prefWidth="201.0" style="-fx-background-color: #408DAA;" text="Ajouter" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Black" size="18.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" layoutX="282.0" layoutY="260.0" mnemonicParsing="false" onAction="#btnafficherB" prefHeight="62.0" prefWidth="203.0" style="-fx-background-color: #408DAA;" text="Afficher" textFill="WHITE">
+                           <padding>
+                              <Insets left="50.0" />
+                           </padding>
+                           <font>
+                              <Font name="Arial Black" size="18.0" />
+                           </font>
+                        </Button>
+                  
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Pane layoutY="81.0" prefHeight="12.0" prefWidth="1217.0" style="-fx-background-color: black;" />
+      <Text layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion Des Agences - Bus" wrappingWidth="460.6708984375">
+         <font>
+            <Font name="Bauhaus 93" size="34.0" />
+         </font>
+      </Text>
+      <TextField fx:id="Email" layoutX="646.0" layoutY="25.0" prefHeight="38.0" prefWidth="265.0" promptText="exemple.exemple@gmail.com" />
+      <Label layoutX="551.0" layoutY="34.0" text="Adresse mail" />
+   </children>
+</AnchorPane>

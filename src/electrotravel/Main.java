@@ -30,13 +30,14 @@ import static utils.SmsApi.AUTH_TOKEN;
  */
 public class Main extends Application {
     
-    
+    Stage stage;
+    Parent parent;
     
     
     @Override
     public void start(Stage primaryStage) throws Exception {
           
-       try {
+      /* try {
         Parent root = FXMLLoader.load(getClass().getResource("/GUI/login.fxml"));
         Scene scene =new Scene(root);
         primaryStage.setTitle("Login!");
@@ -45,7 +46,18 @@ public class Main extends Application {
    
     }
 catch(IOException ex )
-{  System.out.println(ex.getMessage());}
+{  System.out.println(ex.getMessage());}*/
+       this.stage = primaryStage;
+        try {
+            parent = FXMLLoader.load(getClass().getResource("/GUI/login.fxml"));
+            Scene scene = new Scene(parent);
+            stage.setTitle("Afficher");
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
        
        
     }

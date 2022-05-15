@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="StckActivite" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1123.0" styleClass="Applicationlkol" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.BackActiviteController">
+   <children>
+      <AnchorPane prefHeight="726.0" prefWidth="942.0" style="-fx-background-color: white;" styleClass="Applicationlkol">
+         <children>
+            <Pane prefHeight="727.0" prefWidth="96.0" style="-fx-background-color: linear-gradient(to right top, #039BE5 , #4DD0E1); -fx-background-radius: 30px 0px 0px 30px;">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="13.0" layoutY="15.0" onMouseClicked="#GoToActivite" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/activite.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="13.0" layoutY="115.0" onMouseClicked="#GoToEquipement" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/equipement.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="23.0" layoutY="90.0" text="Activite" textFill="WHITE" />
+                  <Label layoutX="8.0" layoutY="185.0" text="Equipement" textFill="WHITE" />
+                  <Label layoutX="24.0" layoutY="687.0" onMouseClicked="#GoToHomeProduit" text="Front" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Label>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="13.0" layoutY="215.0" onMouseClicked="#GoToHotel" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hotel.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="26.0" layoutY="285.0" text="Hotel" textFill="WHITE" />
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="13.0" layoutY="307.0" onMouseClicked="#GoToRestaurant" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/restaurant.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="15.0" layoutY="377.0" text="restaurant" textFill="WHITE" />
+               </children></Pane>
+            <Label layoutX="531.0" layoutY="24.0" text="Activite" textFill="#bfbbd0">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TableViewActivites" layoutX="103.0" layoutY="206.0" prefHeight="422.0" prefWidth="1010.0">
+              <columns>
+                <TableColumn fx:id="col_Nom" prefWidth="188.0" text="Nom" />
+                  <TableColumn fx:id="col_Type" prefWidth="203.0" text="Type" />
+                  <TableColumn fx:id="col_Date" prefWidth="173.0" text="Date" />
+                  <TableColumn fx:id="col_Heure" minWidth="0.0" prefWidth="150.0" text="Heure" />
+                  <TableColumn fx:id="col_Duree" minWidth="0.0" prefWidth="150.0" text="Duree" />
+                  <TableColumn fx:id="col_Action" minWidth="0.0" prefWidth="132.0" text="Action" />
+              </columns>
+            </TableView>
+            <JFXButton ellipsisString="" layoutX="1016.0" layoutY="643.0" onMouseClicked="#OpenFormulaireAdd" prefHeight="68.0" prefWidth="89.0" style="-fx-background-color: black; -fx-background-radius: 30px;" textFill="WHITE">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="55.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/activite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Pane layoutX="267.0" layoutY="98.0" prefHeight="86.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right top, #EB3349 , #F45C43); -fx-background-radius: 1em;">
+               <children>
+                  <Label layoutX="6.0" layoutY="9.0" prefHeight="27.0" prefWidth="185.0" style="-fx-alignment: center;" text="Total" textAlignment="CENTER" textFill="#ae453b">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="txtStatTotal" layoutX="85.0" layoutY="23.0" text="0" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="75.0" fitWidth="75.0" layoutX="157.0" layoutY="127.0" onMouseClicked="#GeneratePDF" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/fichierPDF.png" />
+               </image>
+            </ImageView>
+            <Pane fx:id="PaneBlur" layoutX="93.0" prefHeight="727.0" prefWidth="1034.0" style="-fx-background-color: white; -fx-opacity: 0.8;" visible="false" />
+            <Pane fx:id="PaneFormulaire" layoutX="324.0" layoutY="152.0" prefHeight="470.0" prefWidth="526.0" style="-fx-background-color: #F7F7F7; -fx-background-radius: 30px 30px 30px 30px;" visible="false">
+               <children>
+                  <JFXTextField fx:id="txtNom" focusColor="#405aa800" layoutX="18.0" layoutY="105.0" prefHeight="55.0" prefWidth="235.0" promptText="Nom" style="-fx-background-color: white; -fx-background-radius: 30px 30px 30px 30px; -fx-alignment: center;" unFocusColor="#4d4d4d00" />
+                  <Label layoutX="498.0" layoutY="7.0" onMouseClicked="#CloseFormulaireClicked" text="X">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="btnModifier" ellipsisString="" layoutX="176.0" layoutY="411.0" onMouseClicked="#ModifierActiviteClicked" prefHeight="40.0" prefWidth="174.0" style="-fx-background-color: black;" text="Modifier" textFill="WHITE" />
+                  <JFXTextField fx:id="txtDuree" focusColor="#405aa800" layoutX="111.0" layoutY="310.0" prefHeight="55.0" prefWidth="305.0" promptText="Duree" style="-fx-background-color: white; -fx-background-radius: 30px 30px 30px 30px; -fx-alignment: center;" unFocusColor="#4d4d4d00" />
+                  <Text fx:id="TitreFormulaire" layoutX="118.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Ajouter une Activite" wrappingWidth="290.00000444054604">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <JFXButton fx:id="btnAjouter" ellipsisString="" layoutX="176.0" layoutY="411.0" onMouseClicked="#AjouterActiviteClicked" prefHeight="40.0" prefWidth="174.0" style="-fx-background-color: black;" text="Ajouter" textFill="WHITE" />
+                  <JFXTextField fx:id="txtType" focusColor="#405aa800" layoutX="276.0" layoutY="105.0" prefHeight="55.0" prefWidth="235.0" promptText="Type" style="-fx-background-color: white; -fx-background-radius: 30px 30px 30px 30px; -fx-alignment: center;" unFocusColor="#4d4d4d00" />
+                  <JFXTextField fx:id="txtHeure" focusColor="#405aa800" layoutX="273.0" layoutY="203.0" prefHeight="55.0" prefWidth="235.0" promptText="Heure" style="-fx-background-color: white; -fx-background-radius: 30px 30px 30px 30px; -fx-alignment: center;" unFocusColor="#4d4d4d00" />
+                  <JFXDatePicker fx:id="txtDate" defaultColor="#000d0c" layoutX="33.0" layoutY="206.0" prefHeight="55.0" prefWidth="205.0" promptText="       Date" style="-fx-background-color: white; -fx-background-radius: 30px 30px 30px 30px;" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="40.0" fitWidth="33.0" layoutX="1076.0" layoutY="14.0" onMouseClicked="#CloseWindowClicked" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/close_window.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="55.0" fitWidth="54.0" layoutX="122.0" layoutY="5.0" onMouseClicked="#GoToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Homeicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

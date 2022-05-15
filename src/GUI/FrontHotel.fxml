@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="StckFrontActivite" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="1123.0" styleClass="Applicationlkol" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.FrontHotelController">
+   <children>
+      <AnchorPane prefHeight="726.0" prefWidth="942.0" style="-fx-background-color: white;" styleClass="Applicationlkol">
+         <children>
+            <Pane prefHeight="727.0" prefWidth="96.0" style="-fx-background-color: linear-gradient(to right top, #039BE5 , #4DD0E1); -fx-background-radius: 30px 0px 0px 30px;">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="14.0" layoutY="38.0" onMouseClicked="#GoToActivite" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/activite.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="24.0" layoutY="113.0" text="Activite" textFill="WHITE" />
+                  <Label layoutX="27.0" layoutY="674.0" onMouseClicked="#GoToBack" text="Back" textFill="WHITE" visible="false">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font></Label>
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="13.0" layoutY="145.0" onMouseClicked="#GoToHotel" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/hotel.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="220.0" text="Hotel" textFill="WHITE" />
+                  <ImageView fitHeight="71.0" fitWidth="70.0" layoutX="14.0" layoutY="248.0" onMouseClicked="#GoToRestaurant" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/restaurant.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="12.0" layoutY="323.0" text="Restaurant" textFill="WHITE" />
+               </children></Pane>
+            <Label layoutX="565.0" layoutY="24.0" text="Hotel" textFill="#bfbbd0">
+               <font>
+                  <Font name="System Bold" size="31.0" />
+               </font>
+            </Label>
+            <Pane fx:id="PaneBlur" layoutX="93.0" prefHeight="727.0" prefWidth="1034.0" style="-fx-background-color: white; -fx-opacity: 0.8;" visible="false" />
+            <ImageView fitHeight="40.0" fitWidth="33.0" layoutX="1076.0" layoutY="14.0" onMouseClicked="#CloseWindowClicked" pickOnBounds="true" preserveRatio="true" visible="false">
+               <image>
+                  <Image url="@../images/close_window.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="scrollPane" layoutX="119.0" layoutY="102.0" prefHeight="603.0" prefWidth="973.0" style="-fx-background-color: linear-gradient(to right top, #f2709c , #ff9472);" />
+            <ImageView fitHeight="55.0" fitWidth="54.0" layoutX="111.0" layoutY="9.0" onMouseClicked="#GoToHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Homeicon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
